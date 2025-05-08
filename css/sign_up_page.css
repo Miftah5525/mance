@@ -1,0 +1,110 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('../images/rooms/room_with_mountain.png');
+  background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  a {
+    color: rgb(252, 185, 0);
+    font-size: 20px;
+  }
+  
+  .container {
+    background: transparent;
+    max-width: 350px;
+    width: 100%;
+    padding: 30px 25px 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    margin: 0 0 25px 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    border: 1.8px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.25s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(59,130,246,0.5);
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px 0;
+    margin-bottom: 10px;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+  
+  button:hover {
+    background-color: #2563eb;
+  }
+  
+  button:active {
+    background-color: #1d4ed8;
+  }
+
+  /*responsive*/
+  @media (max-width: 400px) {
+    .container {
+      margin: 0 15px;
+      padding: 25px 20px 30px 20px;
+    }
+    h1 {
+      font-size: 1.6rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      font-size: 0.95rem;
+    }
+  }
+  

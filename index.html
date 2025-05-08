@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TabBar Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .tab-container {
+      display: flex;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background-color: #f1f1f1;
+    }
+
+    .tab.active {
+      background-color: white;
+      border-bottom: 2px solid blue;
+      font-weight: bold;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tab Buttons -->
+  <div class="tab-container">
+    <button class="tab active" onclick="openTab(event, 'home')">Home</button>
+    <button class="tab" onclick="openTab(event, 'about')">About</button>
+    <button class="tab" onclick="openTab(event, 'contact')">Contact</button>
+  </div>
+
+  <!-- Tab Contents -->
+  <div id="home" class="tab-content active">
+    <h2>Home</h2>
+    <p>Welcome to the homepage!</p>
+  </div>
+
+  <div id="about" class="tab-content">
+    <h2>About</h2>
+    <p>This is the about section.</p>
+  </div>
+
+  <div id="contact" class="tab-content">
+    <h2>Contact</h2>
+    <p>Reach us via email or phone.</p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function openTab(evt, tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      const tabs = document.querySelectorAll('.tab');
+
+      // Hide all content and remove active class from all tabs
+      contents.forEach(content => content.classList.remove('active'));
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Show the selected tab content
+      document.getElementById(tabId).classList.add('active');
+
+      // Mark the clicked tab as active
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

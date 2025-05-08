@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Header */
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .logo {
+    float: left;
+    font-size: 24px;
+  }
+  
+  nav ul {
+    float: left;
+    list-style: none;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a.active,
+  nav ul li a:hover {
+    background-color: #afaea9;
+    border-radius: 5px;
+  }
+  
+  .auth-buttons {
+    float: right;
+  }
+  
+  .auth-buttons a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #f8b400;
+  }
+  
+  .auth-buttons .btn-login {
+    background-color: #e09e12;
+  }
+  
+  .auth-buttons .btn-register {
+    background-color: #e09e12;
+  }
+  
+  .auth-buttons a:hover {
+    opacity: 0.8;
+  }
+  
+  header::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .hero {
+    background-image: url('../images/rooms/room_with_mountain.png');
+    background-size: cover;                
+    background-position: center;                  
+    background-repeat: no-repeat;                  
+    background-attachment: scroll;                 
+    height: 100vh;                                   
+    display: flex;                                   
+    align-items: center;                             
+    justify-content: center;                         
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 0 20px;
+  }
+  
+  .hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-content .btn {
+    background-color: #f8b400;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  
+  /* Sections */
+  section {
+    padding: 60px 0;
+  }
+  
+  .rooms .room-cards,
+  .amenities .amenities-cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+  
+  .card {
+    flex-shrink: 0;
+    width: 250px;
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .card h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .amenities-cards {
+    gap: 30px;
+  }
+  
+  .amenities-cards .card {
+    width: 220px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      float: none;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  
+    .hero-content h2 {
+      font-size: 2rem;
+    }
+  
+    .rooms .room-cards,
+    .amenities .amenities-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
